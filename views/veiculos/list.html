@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Veículos</title>
+</head>
+<body>
+    <h1>Lista de Veículos</h1>
+    <a href="/veiculos/formulario"> Novo Veículo</a>
+    <br />
+    {% for veiculo in veiculos %}
+        <p><a href="/veiculos/formulario?id={{veiculo.id}}">{{veiculo.modelo}}</a> - {{veiculo.marca}} - {{veiculo.cor}} - {{veiculo.ano}} </p>
+    {% endfor %}
+    
+</body>
+</html>
